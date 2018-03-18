@@ -204,7 +204,7 @@ yearsUntilRetirement('Mary', 2018);
 //////////////////////////////////////////////////////////////////
 // Lecture : Statement and expressions
 
-function someFun(par) {
+/*function someFun(par) {
     // code
 }
 
@@ -213,10 +213,55 @@ var someFun = function(par) {
 }
 
 // Expressions (always produce a value, an outcome)
- 3 + 4 ;
-var x = 3:
+//3 + 4 ;
+var x = 3;
 
 //statements (just perfome an action)
 if (x === 5) {
     // do somenthing
+}*/
+
+//////////////////////////////////////////////////////////////////
+// Lecture : Arrays
+
+var names = ['John', 'Jane', 'Mark'];
+
+var years = new Array(1990, 1696, 1948);
+
+//console.log(names[2]);
+//names[1] = 'Ben';
+//console.log(names);
+
+var john = ['John', 'Smith', 1990, 'designer', false];
+
+console.log(john);
+
+//.push adds element at the end of the array
+john.push('blue');
+
+//.unshift adds element at the beginning of the array
+john.unshift('Mr')
+console.log(john);
+
+//.pop removes the last element of the array
+john.pop();
+console.log(john);
+
+//.shift remove the first element of the array
+john.shift();
+console.log(john);
+
+//.indexOf returns the postion of the element in the array
+//if this element exits
+//if if does not, it returns -1.
+//to see what indexOf returns,
+//let's use alert (this is one way to see it)
+////alert(john.indexOf('Smith'));
+
+//let's try an statement to find out if an element exists in
+//the array
+//an statement does not produce any inmediate output
+
+if (john.indexOf('teacher') === -1) {
+    console.log('John is not a teacher');
 }
