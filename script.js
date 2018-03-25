@@ -224,7 +224,7 @@ if (x === 5) {
 //////////////////////////////////////////////////////////////////
 // Lecture : Arrays
 
-var names = ['John', 'Jane', 'Mark'];
+/*var names = ['John', 'Jane', 'Mark'];
 
 var years = new Array(1990, 1696, 1948);
 
@@ -264,4 +264,44 @@ console.log(john);
 
 if (john.indexOf('teacher') === -1) {
     console.log('John is not a teacher');
-}
+}*/
+
+//////////////////////////////////////////////////////////////////
+// Lecture : Objects
+
+// order does not matter (it is not indexed as array is)
+var john = {
+    //key  //value
+    name: 'John',
+    lastName: 'Smith',
+    yearOfBirth: 1990,
+    job: 'teacher',
+    isMarried: false
+};
+
+// one one to print it out
+console.log(john.job);
+
+// another way (Pythonic way like a list)
+console.log(john['job']);
+
+// assigning a variable value as a key
+var xyz = 'yearOfBirth';
+
+console.log(john[xyz]);
+
+// data mutuation
+john.lastName = 'Miller';
+john['job'] = 'programmer';
+
+console.log(john);
+
+// another way to declare an object
+var jane = new Object();
+jane.name = 'Jane';
+jane.lastName = 'Smith';
+jane['yearOfBirth'] = 1969;
+jane['job'] = 'retired';
+jane['isMarried'] = true;
+
+console.log(jane);
