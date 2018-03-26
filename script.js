@@ -356,7 +356,7 @@ console.log(john);
 */
 
 //v2.0
-var john = {
+/*var john = {
     //key  //value
     name: 'John',
     lastName: 'Smith',
@@ -378,4 +378,51 @@ var john = {
 // and assigns the value of yearOfBirth
 // not calling it here, would not create the age property
 john.calculateAge();
-console.log(john);
+console.log(john);*/
+
+ //////////////////////////////////////////////////////////////////
+// Lecture : Loops
+
+// for loops
+/*for (var i = 0; i < 10; i++) {
+    console.log(i);
+}
+
+var names = ['John', 'Jane', 'Mary', 'Mark', 'Bob'];
+
+// using the length method
+for (var i = 0; i < names.length; i++) {
+    console.log(names[i]);
+}*/
+
+// printing out backwars the content of the array
+//var names = ['John', 'Jane', 'Mary', 'Mark', 'Bob'];
+
+/*for(var i = (names.length - 1); i >= 0; i--) {
+    console.log(names[i]);
+}*/
+
+// while loops
+var names = ['John', 'Jane', 'Mary', 'Mark', 'Bob'];
+
+var i = 0;
+while (i < names.length) {
+    console.log(names[i]);
+    i++;
+}
+
+for (var i = 1; i <= 5; i++) {
+    console.log(i);
+
+    if(i === 3) {
+        break;
+    }
+}
+
+for (var i = 1; i <= 5; i++) {
+    if (i === 3) {
+        continue;
+    }
+
+    console.log(i);
+}
