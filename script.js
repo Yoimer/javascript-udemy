@@ -270,7 +270,7 @@ if (john.indexOf('teacher') === -1) {
 // Lecture : Objects
 
 // order does not matter (it is not indexed as array is)
-var john = {
+/*var john = {
     //key  //value
     name: 'John',
     lastName: 'Smith',
@@ -304,4 +304,78 @@ jane['yearOfBirth'] = 1969;
 jane['job'] = 'retired';
 jane['isMarried'] = true;
 
-console.log(jane);
+console.log(jane);*/
+
+ //////////////////////////////////////////////////////////////////
+// Lecture : Objects and methods
+
+/* v1.0
+var john = {
+    //key  //value
+    name: 'John',
+    lastName: 'Smith',
+    yearOfBirth: 1988,
+    job: 'teacher',
+    isMarried: false,
+    family: ['Jane', 'Mark', 'Bob'],
+    // this is another way to declare a function 
+    //it has the same efect like a traditional way
+    // this is the way to declare in an object
+    calculateAge: function(yearOfBirth) {
+        //return 2018 - yearOfBirth;
+        // this reserved word means this object(john in this case)
+        return 2018 - this.yearOfBirth;
+    }
+};
+
+
+// this is the the traditional way to declare a function
+//var calculateAge = function(yearOfBirth) {
+//}
+
+// displays family property
+//console.log(john.family);
+
+// displays a function call
+// using dot notation
+//console.log(john.calculateAge(2001));
+
+// displays calculateAge by using
+// the reserved key this inside the object
+// note thae the property yearOfBirth is
+// hardcorded
+console.log(john.calculateAge());
+
+// creating and assigning the age property
+// in john object
+
+var age = john.calculateAge();
+john.age = age;
+
+console.log(john);
+*/
+
+//v2.0
+var john = {
+    //key  //value
+    name: 'John',
+    lastName: 'Smith',
+    yearOfBirth: 1988,
+    job: 'teacher',
+    isMarried: false,
+    family: ['Jane', 'Mark', 'Bob'],
+    // this is another way to declare a function 
+    //it has the same efect like a traditional way
+    // this is the way to declare it in an object
+    calculateAge: function(yearOfBirth) {
+        // creates a new property (age)
+        // and assigns the value of yearOfBirth
+        this.age = 2018 - this.yearOfBirth;
+    }
+};
+
+// creates a new property (age)
+// and assigns the value of yearOfBirth
+// not calling it here, would not create the age property
+john.calculateAge();
+console.log(john);
