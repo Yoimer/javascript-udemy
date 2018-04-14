@@ -474,7 +474,7 @@ for (i = 0; i < ages.length; i++) {
 }*/
 
 
-function printFullAge(years) {
+/*function printFullAge(years) {
 
     var ages = [];
     var fullAges = [];
@@ -500,4 +500,22 @@ function printFullAge(years) {
 
 var years = [2001, 1985, 1994, 2014, 1973];
 var full_1 = printFullAge(years);
-var full_2 = printFullAge([2012, 1915, 1999]);
+var full_2 = printFullAge([2012, 1915, 1999]);*/
+
+////////////////////////////////////////////
+// Lecture: Scoping
+
+// First scoping example
+
+var a = 'Hello!';
+first();
+
+function first() {
+    var b = 'Hi!';
+    second();
+
+    function second() {
+        var c = 'Hey!';
+        console.log(a + b + c);
+    }
+}
